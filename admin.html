@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
-        /* Estilos específicos para a área Admin (inline para não alterar seu style.css original) */
+        /* --- SEGURANÇA SIMULADA --- */
+        /* Esconde o corpo da página inicialmente para não mostrar dados antes da senha */
+        body {
+            display: none;
+        }
+
+        /* --- ESTILOS DA ÁREA ADMIN --- */
         .admin-controls {
             background-color: #0a6428;
             padding: 15px;
@@ -62,6 +68,38 @@
             background-color: #6c757d;
         }
     </style>
+
+    <script>
+        // --- SCRIPT DE PROTEÇÃO ---
+        const SENHA_ADMIN = "admin123"; // Defina sua senha aqui
+
+        function verificarAcesso() {
+            // Verifica se já logou nesta sessão
+            const jaLogado = sessionStorage.getItem("admin_logado");
+
+            if (jaLogado === "true") {
+                // Já está logado, mostra a tela
+                document.body.style.display = "block";
+            } else {
+                // Pede a senha
+                // O setTimeout ajuda o navegador a renderizar o prompt corretamente
+                setTimeout(() => {
+                    const senhaDigitada = prompt("Esta é uma área restrita.\nPor favor, digite a senha de administrador:");
+
+                    if (senhaDigitada === SENHA_ADMIN) {
+                        sessionStorage.setItem("admin_logado", "true");
+                        document.body.style.display = "block";
+                    } else {
+                        alert("Acesso negado! Senha incorreta.");
+                        window.location.href = "index.html"; // Redireciona para home
+                    }
+                }, 100);
+            }
+        }
+
+        // Executa a verificação ao carregar a janela
+        window.onload = verificarAcesso;
+    </script>
 </head>
 <body>
 
