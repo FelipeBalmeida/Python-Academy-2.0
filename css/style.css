@@ -1,0 +1,247 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Fonte Principal (Fonte 1) */
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #212121; /* Cor 3: Preto/Fundo */
+    color: #FFFFFF; /* Cor 4: Branco */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* ----------------------- CABEÇALHO E NAVEGAÇÃO ----------------------- */
+.main-header {
+    background-color: #306998; /* Cor 1: Azul Python */
+    padding: 15px 0;
+    border-bottom: 3px solid #FFD43B; /* Cor 2: Amarelo Python */
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header h1 {
+    font-size: 1.8em;
+    color: #FFD43B; /* Cor 2: Amarelo Python */
+}
+
+/* Link do Logo nas páginas internas */
+.main-header h1 .logo-link {
+    color: #FFD43B;
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+    /* Fonte Secundária (Fonte 2) - usada para destacar */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.main-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ----------------------- SEÇÕES PRINCIPAIS (index.html) ----------------------- */
+main section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #FFD43B; /* Amarelo Python */
+    margin-bottom: 20px;
+}
+
+/* HERO SECTION */
+.hero-section {
+    background-color: #121212;
+    padding: 60px 0;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border: 5px solid #306998; /* Cor 1 */
+    margin-bottom: 20px;
+}
+
+.slogan {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 20px 0;
+}
+
+/* Ícones (Requisito 2+ Ícones) */
+.icon-python, .icon-book {
+    font-size: 3em;
+    margin: 0 15px;
+    color: #306998; /* Azul */
+}
+
+/* MÓDULOS SECTION */
+.modulos-section {
+    background-color: #2a2a2a;
+}
+
+.modulos-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.modulos-list li {
+    background-color: #1e1e1e;
+    margin: 10px auto;
+    padding: 15px;
+    border-left: 5px solid #FFD43B;
+    text-align: left;
+    max-width: 600px;
+}
+
+.content-image {
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+/* MISSÃO SECTION */
+.missao-section {
+    background-color: #306998; /* Cor 1: Azul Python */
+    color: #FFFFFF;
+}
+
+.ods-info {
+    display: block;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    max-width: 700px;
+    font-style: italic;
+}
+
+.link-ods {
+    color: #FFD43B;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.ods-logo {
+    max-width: 150px;
+    margin-top: 15px;
+}
+
+/* ----------------------- PÁGINA DE CADASTRO E LOGIN ----------------------- */
+.form-main {
+    padding: 40px 0;
+}
+
+.form-section {
+    max-width: 600px;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: left;
+    margin: 0 auto; /* Centraliza o formulário */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"], /* Estilo para o campo de senha */
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #306998;
+    background-color: #2a2a2a;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+
+.btn-submit {
+    background-color: #FFD43B; /* Cor 2 */
+    color: #212121;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #e6c200;
+}
+
+.login-info { /* Estilo para a mensagem de simulação */
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #aaa;
+    text-align: center;
+}
+
+/* ----------------------- RODAPÉ ----------------------- */
+.main-footer {
+    background-color: #121212;
+    color: #AAAAAA;
+    padding: 15px 0;
+    text-align: center;
+    border-top: 1px solid #306998;
+}
+
+.main-footer a {
+    color: #FFD43B;
+    text-decoration: none;
+}
+
+/*  */
+@media (max-width: 600px) {
+    .main-header .container {
+        flex-direction: column;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .main-nav ul li a {
+        text-align: center;
+        padding: 8px 15px;
+    }
+}

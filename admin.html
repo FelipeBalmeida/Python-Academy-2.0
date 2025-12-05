@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Python Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Estilos específicos para a área Admin (inline para não alterar seu style.css original) */
+        .admin-controls {
+            background-color: #0a6428;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+        
+        .user-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .user-list li {
+            background: white;
+            border: 1px solid #e1e1e1;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .user-info strong { color: #306998; /* Azul Python */ }
+        .user-date { font-size: 0.85rem; color: #666; display: block; margin-bottom: 5px;}
+
+        /* Botões de ação específicos */
+        .btn-delete {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background 0.3s;
+        }
+        .btn-delete:hover { background-color: #a71d2a; }
+
+        .btn-delete-all {
+            background-color: #343a40; 
+            color: #fff;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .btn-clear {
+            background-color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1><a href="index.html" class="logo-link">Python Academy</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-main">
+        <section class="container form-section">
+            <h2>Painel Administrativo</h2>
+            <p>Gerenciamento de alunos e inscrições.</p>
+
+            <div class="admin-controls">
+                <div class="form-group">
+                    <label for="searchData"><i class="fas fa-search"></i> Pesquisar (Nome ou E-mail):</label>
+                    <input type="text" id="searchData" placeholder="Digite para filtrar...">
+                </div>
+            </div>
+
+            <form id="formAdmin" class="contact-form">
+                <div class="form-group">
+                    <label for="nomeUser">Nome do Usuário:</label>
+                    <input type="text" id="nomeUser" required placeholder="Ex: Felipe Almeida">
+                </div>
+
+                <div class="form-group">
+                    <label for="emailUser">E-mail:</label>
+                    <input type="email" id="emailUser" required placeholder="Ex: felipe@email.com">
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <button type="submit" class="btn-submit" style="flex: 2;">Cadastrar Aluno</button>
+                    <button type="button" id="btnLimpar" class="btn-submit btn-clear" style="flex: 1;">Limpar</button>
+                </div>
+            </form>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #ccc;">
+
+            <h3>Alunos Cadastrados</h3>
+            
+            <button id="btnExcluirTodos" class="btn-submit btn-delete-all">
+                <i class="fas fa-trash-alt"></i> Excluir Todos os Registros
+            </button>
+
+            <ul id="listaUsuarios" class="user-list">
+                </ul>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Python Academy.</p>
+            <p>Desenvolvido por: <a href="curriculo.html" target="_blank">Felipe Bezerra de Almeida</a></p>
+        </div>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
