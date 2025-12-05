@@ -4,13 +4,13 @@ Bem-vindo à **Python Academy**, uma plataforma educacional desenvolvida para de
 
 ---
 
-## 🎯 Objetivo e ODS
+##  Objetivo e ODS
 
 O projeto tem como missão facilitar o aprendizado de programação para iniciantes, alinhando-se diretamente ao **ODS 4 – Educação de Qualidade**. A plataforma busca oferecer uma interface clara para apresentação do conteúdo e uma área administrativa funcional para gestão de interessados.
 
 ---
 
-## 🚀 Funcionalidades do Projeto
+##  Funcionalidades do Projeto
 
 O desenvolvimento foi dividido em duas etapas principais:
 
@@ -35,7 +35,7 @@ Uma área restrita para gerenciamento de pré-inscrições, desenvolvida com **J
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 * **HTML5:** Estrutura semântica e acessível.
 * **CSS3:** Estilização, Flexbox e Design System.
@@ -44,7 +44,7 @@ Uma área restrita para gerenciamento de pré-inscrições, desenvolvida com **J
 
 ---
 
-## 📚 Conteúdo Programático (Simulado)
+##  Conteúdo Programático (Simulado)
 
 Na interface do usuário, o curso aborda visualmente:
 - Variáveis e tipos de dados
@@ -54,7 +54,7 @@ Na interface do usuário, o curso aborda visualmente:
 
 ---
 
-## 🎓 Informações Acadêmicas
+##  Informações Acadêmicas
 
 **Disciplina:** Programação Web Front-End (2025_02)
 **Instituição:** UTFPR – Universidade Tecnológica Federal do Paraná, Câmpus Cornélio Procópio.
@@ -64,7 +64,7 @@ Prof. Gabriel Canhadas Genvigir (gabriel@utfpr.edu.br)
 
 ---
 
-## 💻 Desenvolvido por
+##  Desenvolvido por
 
 | Nome | RA |
 | :--- | :--- |
